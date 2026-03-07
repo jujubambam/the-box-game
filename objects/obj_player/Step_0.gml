@@ -37,12 +37,28 @@ if (place_meeting(x, y+1, obj_solid))
 //horizontal collision
 if (place_meeting(x+hsp, y, obj_solid))
 {
-	while (!place_meeting(x+sign(hsp), y, obj_solid))
+	var yplus = 0;
+	while (place_meeting(x+hsp, y-yplus, obj_solid) && yplus <= abs(1*hsp))
 	{
-		x += sign(hsp)
+		yplus += 1
 	}
-	if (hsp != 0.1) hsp = -hsp/1.5 else hsp = 0
+	
+	if (place_meeting(x+hsp, y-yplus, obj_solid))
+	{
+		while (!place_meeting(x+sign(hsp), y, obj_solid))
+		{
+			x += sign(hsp)
+		}
+		hsp = 0
+	}
+	else
+	{
+		y -= yplus
+	}
+	
 }
+
+x += hsp
 
 //vertical collision
 if (place_meeting(x, y+vsp, obj_solid))
@@ -54,8 +70,12 @@ if (place_meeting(x, y+vsp, obj_solid))
 	vsp = 0
 }
 
+//g o  d o w n  s l o p e s
+while (place_meeting(x, y+hsp+1, obj_slope) && (!place_meeting(x, y+1, obj_slope)) && vspeed >=0)
+{
+	y += 1
+}
 
-x += hsp
 y += vsp
 
 angle -= hsp
