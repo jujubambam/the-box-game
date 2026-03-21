@@ -1,10 +1,10 @@
 {
   "$GMSprite":"",
-  "%Name":"spr_tut_text_1",
+  "%Name":"spr_tut_text_2",
   "bboxMode":0,
-  "bbox_bottom":15,
+  "bbox_bottom":21,
   "bbox_left":0,
-  "bbox_right":109,
+  "bbox_right":269,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -16,12 +16,12 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":16,
+  "height":22,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"01366b2d-4691-492e-bfdc-f6bfe6f613f1","blendMode":0,"displayName":"default","isLocked":false,"name":"01366b2d-4691-492e-bfdc-f6bfe6f613f1","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_tut_text_1",
+  "name":"spr_tut_text_2",
   "nineSlice":null,
   "origin":4,
   "parent":{
@@ -69,14 +69,14 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a97b009d-f6ac-454f-aebd-7a3cf9fdc03c","path":"sprites/spr_tut_text_1/spr_tut_text_1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a97b009d-f6ac-454f-aebd-7a3cf9fdc03c","path":"sprites/spr_tut_text_2/spr_tut_text_2.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"90649881-2824-432c-952e-187c9666a542","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":55,
-    "yorigin":8,
+    "xorigin":135,
+    "yorigin":11,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":110,
+  "width":270,
 }
