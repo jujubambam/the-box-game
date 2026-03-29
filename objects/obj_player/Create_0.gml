@@ -8,3 +8,7 @@ max_spd = 5;
 jump_spd = 6
 
 angle = 0
+
+item_id = 0;
+
+can_flip = false;

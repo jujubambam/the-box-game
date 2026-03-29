@@ -27,6 +27,9 @@ else if (hsp < 0) && (!place_meeting(x, y+abs(hsp)+1, obj_slope))
     hsp += acc/3
 }
 
+var dir = 1;
+if (move != 0) dir = move
+
 // Jumping — check both solid and slope as ground
 if (place_meeting(x, y+1, obj_solid) || place_meeting(x, y+1, obj_slope))
 {
@@ -66,11 +69,13 @@ if (place_meeting(x, y+vsp, obj_solid) || place_meeting(x, y+vsp, obj_slope))
         y += sign(vsp)
     }
     vsp = 0
+	
+	max_spd = 5
+	
+	can_flip = false;
 }
 
 y += vsp
-
-
 
 while (place_meeting(x, y+abs(hsp)+1, obj_slope) && !place_meeting(x, y+1, obj_slope) && vsp >= 0)
 {
@@ -88,6 +93,14 @@ if (place_meeting(x, y+1, obj_slope))
 if (!place_meeting(x, y+abs(hsp)+1, obj_slope) && hsp > 5)
 {
     max_spd = 5
+}
+
+//iShowSpeed
+if (place_meeting(x, y, obj_speed))
+{
+	hsp = 15 * dir
+	max_spd = 15;
+	can_flip = true;
 }
 
 angle -= hsp * 2
