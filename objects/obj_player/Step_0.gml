@@ -95,12 +95,4 @@ if (!place_meeting(x, y+abs(hsp)+1, obj_slope) && hsp > 5)
     max_spd = 5
 }
 
-//iShowSpeed
-if (place_meeting(x, y, obj_speed))
-{
-	hsp = 15 * dir
-	max_spd = 15;
-	can_flip = true;
-}
-
 angle -= hsp * 2
