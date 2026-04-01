@@ -35,6 +35,11 @@ if (place_meeting(x+vsp, y, obj_solid))
     vsp = key_jump * -jump_spd
 }
 
+if (place_meeting(x+1, y, obj_solid)) && (key_jump)
+{
+    audio_play_sound(snd_jump, 1, false)
+}
+
 // Horizontal collision
 if (place_meeting(x, y+hsp, obj_solid))
 {

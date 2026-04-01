@@ -9,8 +9,8 @@
   "name":"obj_dart_throw",
   "overriddenProperties":[],
   "parent":{
-    "name":"Items",
-    "path":"folders/Objects/Objects/Items.yy",
+    "name":"Dart",
+    "path":"folders/Objects/Objects/Items/Dart.yy",
   },
   "parentObjectId":null,
   "persistent":false,

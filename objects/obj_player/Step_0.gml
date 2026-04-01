@@ -1,6 +1,6 @@
 var key_left = keyboard_check(vk_left)
 var key_right = keyboard_check(vk_right)
-var key_jump = keyboard_check(ord("Z"))
+var key_jump = keyboard_check_pressed(ord("Z"))
 var move = key_right - key_left
 
 vsp += grv
@@ -34,6 +34,11 @@ if (move != 0) dir = move
 if (place_meeting(x, y+1, obj_solid) || place_meeting(x, y+1, obj_slope))
 {
     vsp = key_jump * -jump_spd
+}
+
+if (place_meeting(x, y+1, obj_solid)) && (key_jump)
+{
+    audio_play_sound(snd_jump, 1, false)
 }
 
 // Horizontal collision
