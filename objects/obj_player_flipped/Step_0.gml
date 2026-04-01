@@ -5,11 +5,17 @@ var move = key_right - key_left
 
 vsp += grv
 
+if (move != 0) dir = move
+
 // Move right
 if (move == 1)
 {
     hsp -= acc
     if (hsp <= -max_spd) hsp = -max_spd
+}
+else if (hsp < 0)
+{
+    hsp += acc/3
 }
 
 // Move left
@@ -17,6 +23,10 @@ if (move == -1)
 {
     hsp += acc
     if (hsp >= max_spd) hsp = max_spd
+}
+else if (hsp > 0)
+{
+    hsp -= acc/3
 }
 
 // Jumping — check both solid and slope as ground
@@ -44,7 +54,7 @@ if (place_meeting(x+vsp, y, obj_solid))
     {
         x += sign(vsp)
     }
-    hsp = 0
+    vsp = 0
 }
 
 x += vsp

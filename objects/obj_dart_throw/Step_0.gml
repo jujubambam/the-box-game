@@ -1,0 +1,1 @@
+vspeed = -15 * abs(sign(obj_player.hsp))

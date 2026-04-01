@@ -77,6 +77,7 @@ if (place_meeting(x, y+vsp, obj_solid) || place_meeting(x, y+vsp, obj_slope))
 
 y += vsp
 
+//go down slopes
 while (place_meeting(x, y+abs(hsp)+1, obj_slope) && !place_meeting(x, y+1, obj_slope) && vsp >= 0)
 {
     y += 1
@@ -93,6 +94,17 @@ if (place_meeting(x, y+1, obj_slope))
 if (!place_meeting(x, y+abs(hsp)+1, obj_slope) && hsp > 5)
 {
     max_spd = 5
+}
+
+//reset flip
+if (hsp <= 5) || (hsp >= -5)
+{
+	alarm[0] = 5
+}
+
+if place_meeting(x+1, y, obj_crate)
+{
+	with obj_crate instance_destroy()
 }
 
 angle -= hsp * 2

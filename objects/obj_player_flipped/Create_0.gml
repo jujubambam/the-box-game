@@ -10,3 +10,5 @@ jump_spd = 6
 angle = 0
 
 item_id = 0;
+
+dir = 1;
